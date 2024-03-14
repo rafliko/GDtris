@@ -1,0 +1,54 @@
+[gd_scene load_steps=12 format=3 uid="uid://c1nuq3x6ewib3"]
+
+[ext_resource type="Script" path="res://scripts/main.cs" id="1_a4nrn"]
+[ext_resource type="Texture2D" uid="uid://qhp8et6bq5tq" path="res://textures/bg1.png" id="2_5yyb4"]
+[ext_resource type="PackedScene" uid="uid://bnivkejbqilha" path="res://scenes/i.tscn" id="2_rb87m"]
+[ext_resource type="PackedScene" uid="uid://duhl8tjctxp1k" path="res://scenes/j.tscn" id="3_ya2xp"]
+[ext_resource type="PackedScene" uid="uid://bvhp6sfapk54p" path="res://scenes/l.tscn" id="4_k8s1c"]
+[ext_resource type="Texture2D" uid="uid://b1s7dnwaotn0i" path="res://textures/board.png" id="4_rqr42"]
+[ext_resource type="PackedScene" uid="uid://c37125uhdti0h" path="res://scenes/o.tscn" id="5_dqge0"]
+[ext_resource type="PackedScene" uid="uid://sspkb4dnpe6v" path="res://scenes/s.tscn" id="6_14llt"]
+[ext_resource type="PackedScene" uid="uid://bobi5qdwxijnd" path="res://scenes/t.tscn" id="7_hbv40"]
+[ext_resource type="PackedScene" uid="uid://wfakh22fraag" path="res://scenes/z.tscn" id="8_c84qv"]
+[ext_resource type="FontFile" uid="uid://uwxfnywlpg87" path="res://fonts/FastupBold-rgPYA.ttf" id="11_tpf2i"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_a4nrn")
+pieces = Array[PackedScene]([ExtResource("2_rb87m"), ExtResource("3_ya2xp"), ExtResource("4_k8s1c"), ExtResource("5_dqge0"), ExtResource("6_14llt"), ExtResource("7_hbv40"), ExtResource("8_c84qv")])
+
+[node name="Bg1" type="Sprite2D" parent="."]
+z_index = -2
+scale = Vector2(4.75, 4.75)
+texture = ExtResource("2_5yyb4")
+centered = false
+
+[node name="Board" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(640, 360)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_rqr42")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+offset_left = 800.0
+offset_top = 70.0
+offset_right = 925.0
+offset_bottom = 140.0
+theme_override_fonts/font = ExtResource("11_tpf2i")
+theme_override_font_sizes/font_size = 40
+text = "NEXT"
+
+[node name="Label2" type="Label" parent="Control"]
+offset_left = 340.0
+offset_top = 70.0
+offset_right = 465.0
+offset_bottom = 140.0
+theme_override_fonts/font = ExtResource("11_tpf2i")
+theme_override_font_sizes/font_size = 40
+text = "HOLD"
+horizontal_alignment = 2

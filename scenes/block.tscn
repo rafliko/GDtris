@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://wc2cbskdpp6i"]
+
+[ext_resource type="Texture2D" uid="uid://dqoaupx4ymjs3" path="res://textures/skin1.png" id="1_7jtll"]
+
+[node name="Block" type="Sprite2D"]
+texture = ExtResource("1_7jtll")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 40, 40)

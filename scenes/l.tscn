@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvhp6sfapk54p"]
+
+[ext_resource type="PackedScene" uid="uid://wc2cbskdpp6i" path="res://scenes/block.tscn" id="1_ktht6"]
+
+[node name="L" type="Node2D"]
+scale = Vector2(0.7, 0.7)
+
+[node name="Block" parent="." instance=ExtResource("1_ktht6")]
+position = Vector2(80, 40)
+region_rect = Rect2(120, 0, 40, 40)
+
+[node name="Block2" parent="." instance=ExtResource("1_ktht6")]
+position = Vector2(80, -4.81482e-35)
+region_rect = Rect2(120, 0, 40, 40)
+
+[node name="Block3" parent="." instance=ExtResource("1_ktht6")]
+position = Vector2(3.8147e-06, 40)
+region_rect = Rect2(120, 0, 40, 40)
+
+[node name="Block4" parent="." instance=ExtResource("1_ktht6")]
+position = Vector2(40, 40)
+region_rect = Rect2(120, 0, 40, 40)
