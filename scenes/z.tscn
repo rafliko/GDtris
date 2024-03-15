@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://wfakh22fraag"]
+[gd_scene load_steps=3 format=3 uid="uid://wfakh22fraag"]
 
+[ext_resource type="Script" path="res://scripts/piece.cs" id="1_gs68w"]
 [ext_resource type="PackedScene" uid="uid://wc2cbskdpp6i" path="res://scenes/block.tscn" id="1_psb42"]
 
 [node name="Z" type="Node2D"]
 scale = Vector2(0.7, 0.7)
+script = ExtResource("1_gs68w")
 
 [node name="Block" parent="." instance=ExtResource("1_psb42")]
 position = Vector2(3.8147e-06, -4.81482e-35)

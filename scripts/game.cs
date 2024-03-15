@@ -1,16 +1,22 @@
 using Godot;
 using System;
 
-public partial class main : Node2D
+public partial class game : Node2D
 {
+	public static float frameTime = 1f/60f;
+	public static float unit = 28f;
+	public static float gravity = 1f/30f;
+	public static float ARR = 1f/2f;
+	public static float DAS = 1f/10f;
+	public static float SDF = 10f;
+
 	public pieceType[] queue = new pieceType[7];
-	private float unit = 28f;
 	[Export] private PackedScene[] pieces;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		randomizers.randomGenerator(queue);
+		randomizers.bagGenerator(queue);
 		SpawnPiece(queue[0]);
 	}
 

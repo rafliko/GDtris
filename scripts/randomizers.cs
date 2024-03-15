@@ -4,7 +4,7 @@ using System.Linq;
 
 public partial class randomizers : Node
 {
-    public static void randomGenerator(main.pieceType[] queue)
+    public static void bagGenerator(game.pieceType[] queue)
     {
         Random rnd = new Random();
         int[] tmp = new int[7];
@@ -21,7 +21,7 @@ public partial class randomizers : Node
 
         for(int i=0; i<7; i++)
         {
-            queue[i] = (main.pieceType)tmp[i];
+            queue[i] = (game.pieceType)tmp[i];
             GD.Print(queue[i]);
         }
     }
