@@ -1,27 +1,25 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 public partial class randomizers : Node
 {
-    public static void bagGenerator(game.pieceType[] queue)
+    public static void bagGenerator(List<game.pieceType> queue)
     {
         Random rnd = new Random();
-        int[] tmp = new int[7];
-
-        Array.Fill(tmp,-1);
+        List<game.pieceType> tmp = new List<game.pieceType>();
 
         for(int i=0; i<7; i++)
         {
-            int x = rnd.Next(7);
-            if(!tmp.Contains(x))
-                tmp[i] = x;
+            game.pieceType x = (game.pieceType)rnd.Next(7);
+            if(!tmp.Contains(x)) tmp.Add(x);
             else i--;
         }
 
         for(int i=0; i<7; i++)
         {
-            queue[i] = (game.pieceType)tmp[i];
+            queue.Add(tmp[i]);
             GD.Print(queue[i]);
         }
     }

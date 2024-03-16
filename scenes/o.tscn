@@ -6,6 +6,7 @@
 [node name="O" type="Node2D"]
 scale = Vector2(0.7, 0.7)
 script = ExtResource("1_tremq")
+origin = Vector2(60, 20)
 
 [node name="Block" parent="." instance=ExtResource("1_ttms8")]
 position = Vector2(40, 0)
